@@ -1,0 +1,304 @@
+@import "_normal";
+@import "_bgSlider";
+@import "_infoPanel";
+@import "_heder";
+@import "_information";
+@import "_footer";
+
+// Стандартні монітори ПК
+@media (max-width: 1920px) {
+	.information .title {
+		font-size: 300px;
+	}
+	.menu__mobile .menu__list-item {
+		font-size: 36px;
+	}
+	.arrow__prev,
+	.arrow__next {
+		width: 80px;
+		height: 80px;
+		border: 2px solid var(--main-color);
+	}
+	.arrow__prev:hover,
+	.arrow__next:hover {
+		border: 2px solid var(--accent-color);
+	}
+}
+
+@media (max-width: 1750px) {
+	.btn {
+		font-size: 14px;
+		padding: 19px 40px;
+	}
+	.information .text {
+		font-size: 16px;
+	}
+	.menu__list-item {
+		font-size: 16px;
+	}
+	.logo {
+		font-size: 30px;
+	}
+	.menu__mobile {
+		padding: 100px 40px;
+	}
+	.information .video {
+		width: 305px;
+		height: 165px;
+	}
+}
+@media (max-width: 1500px) {
+	:root {
+		--padding-TB: 65px;
+		--padding-LR: 100px;
+	}
+	.information .title {
+		font-size: 250px;
+	}
+	.arrow__prev,
+	.arrow__next {
+		width: 65px;
+		height: 65px;
+	}
+	.menu__mobile {
+		padding: 75px 0px;
+		.menu__list-item:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+	.info__panel-bg h1 {
+		width: 354px;
+		br {
+			display: none;
+		}
+	}
+	.networks__social-item {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+// Маленькі монітори ПК
+@media (max-width: 1440px) {
+	.conteiner {
+		max-width: 1440px;
+		min-width: 1024px;
+	}
+	.information {
+		.text {
+			width: 53%;
+			min-width: 360px;
+			font-size: 14px;
+		}
+	}
+	.menu .menu__list {
+		display: none;
+	}
+	.information .title {
+		font-size: 225px;
+	}
+	.menu__btn {
+		margin: 0;
+	}
+}
+
+@media (max-width: 1100px) {
+	:root {
+		--padding-TB: 42px;
+		--padding-LR: 35px;
+	}
+	.information {
+		.title {
+			font-size: 200px;
+		}
+	}
+	.btn {
+		margin: 50px 0;
+	}
+}
+@media (max-width: 1100px) {
+	.information .video {
+		width: 30.5vw;
+		height: 16.5vw;
+	}
+}
+
+// Ноутбук - Планшети
+@media (max-width: 1024px) {
+	.conteiner {
+		min-width: 100%;
+	}
+}
+
+// Мобільний на боку
+@media (max-width: 768px) {
+	.logo {
+		font-size: 25px;
+	}
+	.menu {
+		&__btn {
+			width: 40px;
+		}
+	}
+	.information {
+		.video {
+			width: 305px;
+			height: 165px;
+			position: static;
+		}
+		.title {
+			font-size: 145px;
+			margin-left: 0.4em;
+		}
+		.text {
+			margin-top: -1em;
+		}
+	}
+	.info__panel {
+		background: transparent;
+		&-bg {
+			width: 100vw;
+			height: 100vh;
+			border-radius: 0;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 768px), (orientation: landscape) and (max-height: 700px) {
+	:root {
+		--padding-TB: 45px;
+	}
+	.information {
+		.video {
+			display: none;
+		}
+		.title {
+			font-size: 33vh;
+		}
+		.text {
+			font-size: 2.4vh;
+			margin-top: -2em;
+		}
+	}
+	.btn {
+		font-size: 2.37vh;
+		padding: 1.36em 2.86em;
+		margin: 1.8em 0 2.5em;
+	}
+	.menu__mobile {
+		padding: 10vh 0px;
+		.logo {
+			font-size: 5vh;
+		}
+		.menu__list {
+			&-link {
+				font-size: 5vh;
+			}
+			&-item:not(:last-child) {
+				margin-bottom: 3vh;
+			}
+		}
+		.menu__btn {
+			width: 8vh;
+			height: 8vh;
+			&-item {
+				height: 1px;
+			}
+		}
+		.menu__list-item::before,
+		.menu__list-item::after {
+			display: none;
+		}
+	}
+	.info__panel {
+		background: transparent;
+		&-bg {
+			width: 100vw;
+			height: 100vh;
+			border-radius: 0;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-height: 350px) {
+	:root {
+		--padding-TB: 24px;
+	}
+	.menu__mobile .menu__list-item:not(:last-child) {
+		margin-bottom: -1vh;
+	}
+}
+
+@media (max-width: 650px) {
+	.arrow__prev,
+	.arrow__next {
+		display: none;
+	}
+	.menu__mobile {
+		border-radius: 0;
+		width: 100vw;
+		height: 100vh;
+		.logo {
+			font-size: 25px;
+		}
+	}
+}
+
+// Мобільний
+@media (max-width: 414px) {
+	.logo {
+		font-size: 5.31vw;
+	}
+	.information {
+		.title {
+			font-size: 26.04vw;
+		}
+		.text {
+			min-width: 100%;
+			font-size: 2.945vw;
+			margin-top: -1.5em;
+		}
+		.video {
+			width: 63.5vw;
+			height: 34.4vw;
+		}
+	}
+	.btn {
+		font-size: 2.5vw;
+		padding: 1.36em 2.86em;
+		margin: 1.8em 0 2.5em;
+	}
+	.info__panel-bg {
+		.btn {
+			font-size: 3.55vw;
+			margin: 7.28vw 0 0 0;
+		}
+		h1 {
+			width: 95%;
+			font-size: 5.75vw;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 480px) {
+	.information {
+		.title {
+			font-size: 25vh;
+		}
+		.text {
+			font-size: 2.5vh;
+		}
+	}
+	.btn {
+		font-size: 2.7vh;
+	}
+}
+
+// @media (orientation:landscape) and (max-width: 480px) {
+
+// }
+// @media (max-width: 450px) {}
+
+// 1200 992 767
+
+// 775 max h

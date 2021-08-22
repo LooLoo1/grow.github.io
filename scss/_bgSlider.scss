@@ -1,0 +1,127 @@
+.slider {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+	&__bg {
+		position: absolute;
+		// top: -500px;
+		width: inherit;
+		height: inherit;
+	}
+
+	&__bg-img {
+		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: inherit;
+		height: inherit;
+		transition: opacity var(--sliderDuration) linear;
+		opacity: 0;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+			url(../img/Bg.png) center/cover no-repeat, #000000;
+
+		&:nth-child(2) {
+			background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%),
+				url(../img/law-philippines-students-plant-trees-graduating.jpg) center/cover no-repeat, #000000;
+		}
+		&:nth-child(3) {
+			background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%),
+				url(../img/videoImg.png) center/cover no-repeat, #000000;
+		}
+		&.active {
+			opacity: 1;
+		}
+		// &::before {
+		// 	content: "";
+		// 	width: 100vw;
+		// 	height: 100vh;
+		// 	position: absolute;
+		// 	pointer-events: none;
+		// 	top: 0;
+		// 	left: 0;
+		// 	z-index: 1000;
+		// 	background: url(../img/GrowForest_tree.png) center/cover no-repeat;
+		// 	background-color: red;
+		// }
+	}
+}
+
+.arrow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: var(--padding-TB) var(--padding-LR);
+	top: 0;
+	left: 0;
+
+	pointer-events: none;
+	&__prev,
+	&__next {
+		position: relative;
+		width: 90px;
+		height: 90px;
+
+		border: 3px solid var(--main-color);
+		border-radius: 50%;
+		transition: border 0.2s linear;
+		pointer-events: painted;
+		cursor: pointer;
+		svg {
+			position: absolute;
+			width: 30%;
+			height: 30%;
+			top: 50%;
+			left: 50%;
+			fill: var(--main-color);
+			// opacity: 0.8;
+			transition: fill 0.2s linear;
+		}
+	}
+	&__prev {
+		svg {
+			transform: translate(-50%, -50%) rotate(-225deg);
+		}
+	}
+	&__next {
+		svg {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+	&__prev:hover,
+	&__next:hover {
+		border: 3px solid var(--accent-color);
+		svg {
+			fill: var(--hover-color);
+		}
+	}
+
+	&__prev::after,
+	&__next::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: inherit;
+		height: inherit;
+
+		opacity: 1;
+		border-radius: 50%;
+		transition: width 0.2s linear, height 0.2s linear, opacity 0.5s linear;
+	}
+	&__prev:hover::after,
+	&__next:hover::after {
+		width: 135px;
+		height: 135px;
+		opacity: 0;
+		border: 2px solid var(--main-color);
+	}
+}

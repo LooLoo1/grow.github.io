@@ -1,0 +1,143 @@
+.information {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	.video {
+		position: absolute;
+		overflow: hidden;
+		right: var(--padding-LR);
+		bottom: var(--padding-TB);
+		width: 410px;
+		height: 220px;
+		background: url(../img/videoImg.png) center/cover no-repeat;
+		border-radius: 20px 0px 20px 20px;
+		cursor: pointer;
+
+		button {
+			position: relative;
+			width: 28.04878%;
+			height: 52.27272%;
+			background: var(--accent-color);
+			border-radius: 50%;
+			border: none;
+			top: 50%;
+			left: 50%;
+			transform: translate(-125%, -50%);
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&::before {
+				position: absolute;
+				width: 19.13043%;
+				height: 19.13043%;
+				clip-path: polygon(25% 0, 25% 100%, 100% 50%);
+				background: var(--hover-color);
+			}
+			&::after {
+				position: absolute;
+				width: inherit;
+				height: inherit;
+				opacity: 0;
+				border: 2px solid var(--hover-color);
+				border-radius: 50%;
+				transition: all 0.2s linear;
+			}
+		}
+		&:hover button::after {
+			width: 140%;
+			height: 140%;
+			opacity: 1;
+		}
+	}
+	.title {
+		// position: relative;
+		// display: inline;
+		font-size: 350px;
+		margin-left: 0.53em;
+		text-align: center;
+		width: 100%;
+		&-item {
+			display: inline;
+			content: attr(data-s);
+			position: relative;
+			font-weight: 900;
+			font-size: 1em;
+			line-height: 1.1em;
+			color: transparent;
+			pointer-events: none;
+			text-align: center;
+			margin-left: -0.53em;
+			&::after {
+				content: attr(data-s);
+				position: absolute;
+				color: var(--hover-color);
+				// left: 0.175em;
+				left: 0;
+				top: 0;
+				text-shadow: 30px 0px 75px rgba(0, 0, 0, 0.4);
+			}
+			&:nth-child(1)::after {
+				z-index: 5;
+			}
+			&:nth-child(2)::after {
+				z-index: 4;
+			}
+			&:nth-child(3)::after {
+				z-index: -2;
+			}
+			&:nth-child(4)::after {
+				z-index: -3;
+			}
+		}
+		&-tree {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			pointer-events: none;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 0;
+			transition: opacity var(--sliderDuration) linear;
+			background: url(../img/GrowForest_tree.png) center/cover no-repeat;
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+}
+.text {
+	max-width: 880px;
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	line-height: 1.2em;
+	letter-spacing: 0.03em;
+	color: var(--hover-color);
+	margin-top: -3em;
+}
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 45px;
+	margin-bottom: 50px;
+	font-weight: bold;
+	font-size: 17px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.1em;
+
+	background: var(--accent-color);
+	border-radius: 5em 0px 5em 5em;
+	padding: 25px 40px;
+	transition: all 0.2s linear;
+	&:hover {
+		border-radius: 5em 5em 5em 0px;
+	}
+}
