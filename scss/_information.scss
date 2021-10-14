@@ -14,7 +14,7 @@
 		border-radius: 20px 0px 20px 20px;
 		cursor: pointer;
 
-		button {
+		.button {
 			position: relative;
 			width: 28.04878%;
 			height: 52.27272%;
@@ -41,15 +41,16 @@
 			}
 			&::after {
 				position: absolute;
-				width: inherit;
-				height: inherit;
+				width: 0%;
+				height: 0%;
 				opacity: 0;
 				border: 2px solid var(--hover-color);
 				border-radius: 50%;
-				transition: all 0.2s linear;
+				z-index: -10;
+				transition: all 0.2s linear, opacity 0.1s linear 0.1s;
 			}
 		}
-		&:hover button::after {
+		&:hover .button::after {
 			width: 140%;
 			height: 140%;
 			opacity: 1;
@@ -96,6 +97,7 @@
 			}
 		}
 		&-tree {
+			display: block;
 			width: 100vw;
 			height: 100vh;
 			position: absolute;

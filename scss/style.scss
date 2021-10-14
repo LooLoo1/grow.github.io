@@ -302,3 +302,23 @@
 // 1200 992 767
 
 // 775 max h
+
+//Support
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+	.menu__mobile {
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+	}
+
+	.info__panel {
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+	}
+	.info__panel-bg {
+		background: rgba(0, 0, 0, 0.45);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+	}
+}

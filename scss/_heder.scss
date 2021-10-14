@@ -198,14 +198,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	// pointer-events: none;
 	align-items: center;
 	padding: 180px 40px;
 	width: 414px;
 	height: 100vh;
 	right: 0;
-	background: rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(15px);
+	background: rgb(5, 50, 50);
 	transform: translate(100%, 0%);
 	transition: transform 0.5s linear;
 

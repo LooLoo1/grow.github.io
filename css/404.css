@@ -1,0 +1,15 @@
+.information .title-item {
+	margin-left: -0.37333em;
+}
+
+.information .title-item:nth-child(2)::after {
+	z-index: -2;
+}
+
+.information .title-item:nth-child(3)::after {
+	z-index: -3;
+}
+
+.information .title {
+	margin-left: 0.3em;
+}
