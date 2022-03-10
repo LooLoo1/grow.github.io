@@ -1,4 +1,4 @@
-# 🍀 Grow 🌿
+# [🍀 Grow 🌿](https://looloo1.github.io/grow.github.io/)
 
 A brief description of what this project does and who it's for
 
